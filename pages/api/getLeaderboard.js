@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+const result = require('../result.json')
 
 export default (req, res) => {
-  res.statusCode = 200
-  res.json({ name: 'John Doe' })
+  return res.status(200).json(result)
 }
