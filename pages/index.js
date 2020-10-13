@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react';
 export default function Home() {
   const [lookingAt, setLookingAt] = useState("pyramid");
   const [result2, setResult] = useState({})
-  const { data, error } = useSWR('/api/getLeaderboard', { refreshInterval: 1000 })
+  const { data, error } = useSWR('/api/getLeaderboard', { refreshInterval: 60000 })
 
   const pyramid = _.filter(data, function(o){
     return o.Experience == "pyramid" && !o.Players.includes('VR')
@@ -55,10 +55,10 @@ export default function Home() {
       }  else if(i == 2){ 
         return <div style={{"position":"absolute", "color":"pink", "fontWeight": "bold", "fontSize": "32px", "top": "500px", "left": "625px" }} key={i}>Team: {o.Players} completed in {Math.ceil(o.Time/60)} minutes </div>
 
-      }else if(i == 2){ 
+      }else if(i == 3){ 
         return <div style={{"position":"absolute", "color":"pink", "fontWeight": "bold", "fontSize": "32px", "top": "580px", "left": "625px" }} key={i}>Team: {o.Players} completed in {Math.ceil(o.Time/60)} minutes </div>
 
-      }else if(i == 2){ 
+      }else if(i == 4){ 
         return <div style={{"position":"absolute", "color":"pink", "fontWeight": "bold", "fontSize": "32px", "top": "640px", "left": "625px" }} key={i}>Team: {o.Players} completed in {Math.ceil(o.Time/60)} minutes </div>
 
       }
