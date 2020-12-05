@@ -59,7 +59,7 @@ export default function Home() {
         return <div style={{"position":"absolute", "color":"pink", "fontWeight": "bold", "fontSize": "32px", "top": "580px", "left": "625px" }} key={i}>Team: {o.Players} completed in {Math.ceil(o.Time/60)} minutes </div>
 
       }else if(i == 4){ 
-        return <div style={{"position":"absolute", "color":"pink", "fontWeight": "bold", "fontSize": "32px", "top": "640px", "left": "625px" }} key={i}>Team: {o.Players} completed in {Math.ceil(o.Time/60)} minutes </div>
+        return <div style={{"position":"absolute", "color":"pink", "fontWeight": "bold", "fontSize": "32px", "top": "660px", "left": "625px" }} key={i}>Team: {o.Players} completed in {Math.ceil(o.Time/60)} minutes </div>
 
       }
       })}
