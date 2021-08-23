@@ -34,7 +34,7 @@ export default function Home() {
       setLookingAt("chronos")
       setResult(topchronos)
     } else if(lookingAt == 'chronos'){
-      setResult(huxley)
+      setResult(tophuxley)
         setLookingAt("huxley")
       } else if(lookingAt == 'huxley'){
       setResult(topstyx)
