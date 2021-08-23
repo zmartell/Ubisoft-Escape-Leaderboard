@@ -22,12 +22,21 @@ export default function Home() {
     return o.Experience == "styx" && !o.Players.includes('VR')
   })
   const topstyx = _.sortBy(styx, 'Time')
+  
+    const huxley = _.filter(data, function(o){
+    return o.Experience == "huxley" && !o.Players.includes('VR')
+  })
+  const tophuxley = _.sortBy(huxley, 'Time')
+  
   useEffect(() => {
     const interval = setInterval(() => {
       if(lookingAt == 'pyramid'){
       setLookingAt("chronos")
       setResult(topchronos)
     } else if(lookingAt == 'chronos'){
+      setResult(huxley)
+        setLookingAt("huxley")
+      } else if(lookingAt == 'huxley'){
       setResult(topstyx)
         setLookingAt("styx")
       } else {
